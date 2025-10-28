@@ -39,7 +39,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-align: center;
 }
 
@@ -56,6 +55,32 @@ body{
     top: 0;
     padding-top: 120px;
     padding-left: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#leftarrow{
+    z-index: 40;
+    height: 50px;
+    width: auto;
+    padding-left: 90px;
+    padding-top: 425px;
+}
+
+#leftarrow:hover{
+    cursor: pointer;
+}
+
+#rightarrow{
+    height: 50px;
+    width: auto;
+    padding-left: 900px;
+    padding-top: 425px;
+}
+
+#rightarrow:hover{
+    cursor: pointer;
 }
 
 #layer1
