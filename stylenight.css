@@ -1,0 +1,159 @@
+body{
+    background-color: rgb(27, 25, 25);
+}
+
+.top_bar{
+    color: rgb(29, 20, 22);
+    text-align: center;
+    background-color: rgb(216, 216, 216);
+    width: 1175px;
+    height: 50px;
+    font-size: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.top_text{
+    padding-top: 10px;
+}
+
+.top_text a{
+    padding-top: 15px;
+    margin-right: 100px;
+}
+
+.tb_container{
+    padding-top: 250px;
+    padding-left: 1200px;
+}
+
+.text_box{
+    background-color: rgb(241, 241, 241);
+    width: 520px;
+    height: 380px;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text_box a{
+    margin: 15px;
+    font-size: 28px;
+    color: rgb(29, 20, 22);
+}
+
+#theme_switch{
+    background-color: rgba(240, 248, 255, 0);
+    font-size: 20px;
+    border: none;
+}
+
+#theme_switch:hover{
+    cursor: pointer;
+}
+
+.img_container img{
+    position: absolute;
+    height: 750px;
+    width: auto;
+    top: 0;
+    padding-top: 120px;
+    padding-left: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#leftarrow{
+    z-index: 40;
+    height: 50px;
+    width: auto;
+    padding-left: 90px;
+    padding-top: 425px;
+}
+
+#leftarrow:hover{
+    cursor: pointer;
+}
+
+#rightarrow{
+    height: 50px;
+    width: auto;
+    padding-left: 900px;
+    padding-top: 425px;
+}
+
+#rightarrow:hover{
+    cursor: pointer;
+}
+
+#layer1
+{   
+   z-index: 30;
+   border: 20px;
+   border-color: antiquewhite;
+
+}
+#layer2
+{
+    z-index: 20;
+    padding-left: 150px;
+    max-height: 70%;
+    width: auto;
+    padding-top: 150px;
+    opacity: 80%;
+}
+
+#layer3
+{
+    z-index: 10;
+    padding-left: 420px;
+    max-height: 70%;
+    width: auto;
+    padding-top: 150px;
+    opacity: 80%;
+}
+
+.bottom_bar
+{      
+    color: rgb(29, 20, 22);
+    text-align: center;
+    background-color: rgb(216, 216, 216);
+    width: 1175px;
+    height: 50px;
+    font-size: 25px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 25px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.bottom_text{
+    padding-top: 10px;
+    display: flex;
+}
+
+
+.bottom_text a{
+    margin-left: 100px;
+}
+
+.bottom_bar img{
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 34%;
+    display: flex;
+}
