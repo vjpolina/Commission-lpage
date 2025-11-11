@@ -47,6 +47,16 @@ body{
     font-size: 28px;
 }
 
+#theme_switch{
+    background-color: rgba(240, 248, 255, 0);
+    font-size: 20px;
+    border: none;
+}
+
+#theme_switch:hover{
+    cursor: pointer;
+}
+
 
 .img_container img{
     position: absolute;
