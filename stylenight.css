@@ -67,12 +67,17 @@ body{
 
 #theme_switch{
     background-color: rgba(240, 248, 255, 0);
-    font-size: 20px;
+    margin-top: 5px;
     border: none;
+    margin-left: 150px;
+    width: 40px;
+    height: 40px;
 }
 
 #theme_switch:hover{
     cursor: pointer;
+    background-color: rgb(185, 179, 179);
+    border-radius: 50%;
 }
 
 .img_container img{
@@ -97,6 +102,7 @@ body{
    z-index: 30;
    border: 20px;
    border-color: antiquewhite;
+   animation: float1 4s ease-in-out infinite;
 
 }
 #layer2
@@ -107,6 +113,7 @@ body{
     width: auto;
     padding-top: 150px;
     opacity: 80%;
+    animation: float2 5s ease-in-out infinite;
 }
 
 #layer3
@@ -117,6 +124,7 @@ body{
     width: auto;
     padding-top: 150px;
     opacity: 80%;
+    animation: float2 6s ease-in-out infinite;
 }
 
 .bottom_bar
@@ -162,3 +170,20 @@ body{
     width: 25px;
     height: 25px;
 }
+
+
+@keyframes float {
+            0% {transform: translateY(0);}
+
+            50% {transform: translateY(-20px);}
+
+            100% {transform: translateY(0);}
+        }
+
+        @keyframes float2 {
+            0% {transform: translateY(0);}
+
+            50% {transform: translateY(20px);}
+
+            100% {transform: translateY(0);}
+        }
