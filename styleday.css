@@ -1,3 +1,13 @@
+@font-face {
+    font-family: headFont;
+    src: url(font/LEMONMILK-Regular.otf);
+}
+
+@font-face {
+    font-family: bodyFont;
+    src: url(font/Teachers/Teachers-Regular.otf);
+}
+
 body{
     background-color: aliceblue;
 }
@@ -8,7 +18,7 @@ body{
     background-color: rgb(105, 105, 105);
     width: 1175px;
     height: 50px;
-    font-size: 25px;
+    font-size: 20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -23,28 +33,36 @@ body{
 
 .top_text a{
     padding-top: 15px;
-    margin-right: 100px;
+    margin-right: 70px;
+    font-family: headFont;
 }
 
 .tb_container{
-    padding-top: 250px;
+    padding-top: 240px;
     padding-left: 1200px;
+    
 }
 
 .text_box{
     background-color: rgb(165, 165, 165);
     width: 520px;
-    height: 380px;
+    height:fit-content;
     z-index: 50;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius:25px;
+    line-height: 0.9;
 }
 
 .text_box a{
-    margin: 15px;
-    font-size: 28px;
+    padding-top: 10px;
+    margin: 10px;
+    font-size: 25px;
+    font-family: bodyFont;
+    padding-bottom: 15px;
 }
 
 #theme_switch{
@@ -68,35 +86,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    
 }
 
-#leftarrow{
-    z-index: 40;
-    height: 50px;
-    width: auto;
-    padding-left: 90px;
-    padding-top: 425px;
-}
-
-#leftarrow:hover{
-    cursor: pointer;
-}
-
-#rightarrow{
-    height: 50px;
-    width: auto;
-    padding-left: 900px;
-    padding-top: 425px;
-}
-
-#rightarrow:hover{
-    cursor: pointer;
-}
 
 #layer1
 {   
    z-index: 30;
-
+   opacity: 100%;
 }
 #layer2
 {
@@ -125,7 +123,7 @@ body{
     background-color: rgb(105, 105, 105);
     width: 1175px;
     height: 50px;
-    font-size: 25px;
+    font-size: 20px;
     position: fixed;
     bottom: 0;
     right: 0;
@@ -138,19 +136,27 @@ body{
 .bottom_text{
     padding-top: 10px;
     display: flex;
+    padding-left: -5px;
 }
 
 
 .bottom_text a{
-    margin-left: 100px;
+    margin-left: 70px;
+    font-family: headFont;
 }
 
 .bottom_bar img{
-    padding-top: 5px;
+    padding-top: 7px;
     padding-left: 15px;
     padding-right: 15px;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 34%;
     display: flex;
+}
+
+#theme_state{
+    display: flex;
+    width: 22px;
+    height: 22px;
 }
