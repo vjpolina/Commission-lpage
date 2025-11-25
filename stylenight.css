@@ -25,6 +25,7 @@ body{
     border-bottom-right-radius: 25px;
     display: flex;
     justify-content: center;
+    z-index: 100;
 }
 
 #logo{
@@ -82,8 +83,8 @@ body{
 #theme_switch{
     background-color: rgba(240, 248, 255, 0);
     margin-top: 5px;
+    margin-left: 190px;
     border: none;
-    margin-left: 150px;
     width: 40px;
     height: 40px;
 }
