@@ -27,8 +27,18 @@ body{
     justify-content: center;
 }
 
-.top_text{
+#logo{
+    height: 30px;
+    width: auto;
+    padding-right: 40px;
+    padding-left: 20px;
     padding-top: 10px;
+}
+
+.top_text{
+    padding-top: 13px;
+    padding-left: 20px;
+
 }
 
 .top_text a{
@@ -82,7 +92,7 @@ body{
 
 
 .img_container img{
-    position: absolute;
+    position: fixed;
     height: 750px;
     width: auto;
     top: 0;

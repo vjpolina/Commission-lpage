@@ -8,6 +8,7 @@ function switchTheme() {
         document.getElementById('insta').src='images/instagram.png';
         document.getElementById('tiktok').src='images/tik-tok.png';
         document.getElementById('twit').src='images/twitter.png';
+        document.getElementById('logo').src='images/logo2.png';
     } 
     else{
         document.getElementById('style').href = "styleday.css";
@@ -15,6 +16,7 @@ function switchTheme() {
         document.getElementById('insta').src='images/instagram_day.png';
         document.getElementById('tiktok').src='images/tik-tok_day.png';
         document.getElementById('twit').src='images/twitter_day.png';
+        document.getElementById('logo').src='images/logo1.png';
     }
     currentState = !currentState;
 }
