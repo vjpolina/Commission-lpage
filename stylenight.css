@@ -46,6 +46,11 @@ body{
     font-family: headFont;
 }
 
+.top_text a:hover, a:active, a:link, a:visited{
+    color: rgb(29, 20, 22);
+    text-decoration: none;
+}
+
 .tb_container{
     padding-top: 240px;
     padding-left: 1200px;
