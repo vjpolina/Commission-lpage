@@ -13,6 +13,22 @@ const content = {
            </ul>
            Click on 'Submit a form' to request your own custom design now!`,
 
+    formText: `Fill out the following form for your commission: <br><br>
+            <form>
+                <label for="email">Email: </label>
+                <input type="text" id="email" placeholder="youremail@here.com"><br><br>
+                Type of item:<br>
+                <input type="checkbox" id="item1">
+                <label for="item1"> Poster</label><br>
+                <input type="checkbox" id="item2">
+                <label for="item2"> Photocard</label><br>
+                <input type="checkbox" id="item3">
+                <label for="item3"> Keychain</label><br>
+                <input type="checkbox" id="item4">
+                <label for="item4"> Icon</label><br><br>
+                <button>Submit</button>
+            </form>`,
+
     bottomBar: [ "Terms and conditions", "Copyright", "Contact me:" ],
     bottomBarIcons: [ "images/instagram_day.png", "images/tik-tok_day.png", "images/twitter_day.png"],
 
@@ -42,6 +58,10 @@ for (let i = 0; i < content.topBartext.length; i++) {
     const a = document.createElement("a");
     a.textContent = content.topBartext[i];
     topText.appendChild(a);
+    
+    if (i == 1) {
+        a.id="form_link";
+    }
 }
 
 const themeButton = document.createElement("button");

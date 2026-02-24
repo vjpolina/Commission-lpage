@@ -55,18 +55,27 @@ body{
 .top_text{
     padding-top: 13px;
     padding-left: 20px;
-
+    max-height: fit-content;
 }
 
 .top_text a{
-    padding-top: 15px;
+    display: inline-block;
+    height: 30px;
+    width: max-content;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 5px;
     margin-right: 70px;
     font-family: headFont;
 }
 
-.top_text a:hover, a:active, a:link, a:visited{
+
+.top_text a:hover{
     color: aliceblue;
     text-decoration: none;
+    background-color: rgb(146, 146, 146);
+    max-height: fit-content;
+    cursor: pointer;
 }
 
 .tb_container{
