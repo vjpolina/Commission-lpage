@@ -1,7 +1,16 @@
 const formLink = document.getElementById("form_link");
+const homeLink = document.getElementById("homepage_link");
 
-formLink.addEventListener("click", function() {
-    textBoxInfo.innerHTML = content.formText;
+window.addEventListener("load", () => {
+    const openPage = localStorage.getItem("openPage");
+    if (openPage === "form") {
+        loadForm();
+    } else {
+        loadHome();
+    }   
+})
+
+function loadForm() {textBoxInfo.innerHTML = content.formText;
 
     const injectedForm = textBoxInfo.querySelector("form");
     if (injectedForm) {
@@ -23,4 +32,15 @@ formLink.addEventListener("click", function() {
             textBoxInfo.removeChild(displayEmail);
         });
     }
-});
+
+    localStorage.setItem("openPage", "form");
+}
+
+
+function loadHome() {
+    textBoxInfo.innerHTML = content.info;
+    localStorage.setItem("openPage", "home");
+}
+
+homeLink.addEventListener("click", loadHome);
+formLink.addEventListener("click", loadForm);

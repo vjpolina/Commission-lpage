@@ -62,6 +62,9 @@ for (let i = 0; i < content.topBartext.length; i++) {
     if (i == 1) {
         a.id="form_link";
     }
+    else if(i==0){
+        a.id="homepage_link";
+    }
 }
 
 const themeButton = document.createElement("button");
