@@ -12,6 +12,19 @@ window.addEventListener("load", () => {
 
 function loadForm() {textBoxInfo.innerHTML = content.formText;
 
+    const textBox = document.createElement("div");
+    textBox.className = "text_box";
+
+    const tbContainer = document.createElement("div");
+    tbContainer.className = "tb_container";
+    body.appendChild(tbContainer);
+    tbContainer.appendChild(textBox);
+
+    const selectText = document.createElement("a");
+    selectText.innerHTML = content.paletteSelection;
+    textBox.appendChild(selectText);
+
+
     const injectedForm = textBoxInfo.querySelector("form");
     if (injectedForm) {
         const emailInput = injectedForm.querySelector("#email");

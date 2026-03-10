@@ -18,6 +18,7 @@ const content = {
                 <label for="email">Email: </label>
                 <input type="text" id="email" placeholder="youremail@here.com"><br><br>
                 Type of item:<br>
+
                 <input type="checkbox" id="item1">
                 <label for="item1"> Poster</label><br>
                 <input type="checkbox" id="item2">
@@ -26,8 +27,17 @@ const content = {
                 <label for="item3"> Keychain</label><br>
                 <input type="checkbox" id="item4">
                 <label for="item4"> Icon</label><br><br>
+
                 <button>Submit</button>
             </form>`,
+
+    paletteSelection: `<select name="Colour palette" id="clrPalette">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                </select>
+                <img id="generatedPalette">
+                <br><br>`,
 
     bottomBar: [ "Terms and conditions", "Copyright", "Contact me:" ],
     bottomBarIcons: [ "images/instagram_day.png", "images/tik-tok_day.png", "images/twitter_day.png"],
