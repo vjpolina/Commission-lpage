@@ -124,8 +124,10 @@ body{
 
 .img_container img{
     position: fixed;
-    height: 750px;
+    height: auto;
+    max-height: 750px;
     width: auto;
+    max-width: 900px;
     top: 0;
     padding-top: 120px;
     padding-left: 250px;
