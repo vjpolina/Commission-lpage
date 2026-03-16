@@ -1,7 +1,7 @@
 const content = {
     topBarImg: "images/logo1.png",
     topBartext: ["That__po__'s Commissions", "Submit a Form", "Portfolio"],
-    images: [ "images/img1.png", "images/img2.png", "images/img3.png"],
+    images: [ " ", " ", " "],
     info: `<b>The perfect place to order a custom illustration!</b><br><br>
            Here we offer commercial and non-commercial custom designs for:
            <ul>
@@ -15,9 +15,11 @@ const content = {
 
     formText: `Fill out the following form for your commission: <br><br>
             <form>
+
                 <label for="email">Email: </label>
                 <input type="text" id="email" placeholder="youremail@here.com"><br><br>
                 Type of item:<br>
+
                 <input type="checkbox" id="item1">
                 <label for="item1"> Poster</label><br>
                 <input type="checkbox" id="item2">
@@ -26,8 +28,11 @@ const content = {
                 <label for="item3"> Keychain</label><br>
                 <input type="checkbox" id="item4">
                 <label for="item4"> Icon</label><br><br>
+
                 <button>Submit</button>
             </form>`,
+
+    paletteSelection: ``,
 
     bottomBar: [ "Terms and conditions", "Copyright", "Contact me:" ],
     bottomBarIcons: [ "images/instagram_day.png", "images/tik-tok_day.png", "images/twitter_day.png"],
@@ -85,6 +90,7 @@ body.appendChild(tbContainer);
 tbContainer.appendChild(textBox);
 
 const textBoxInfo = document.createElement("a");
+textBoxInfo.id = "text_box_info";
 textBoxInfo.innerHTML = content.info;
 textBox.appendChild(textBoxInfo);
 
@@ -92,12 +98,48 @@ const imgContainer = document.createElement("div");
 imgContainer.className = "img_container";
 body.appendChild(imgContainer);
 
+
+async function fetchNekoImage() {
+    try {
+        const res = await fetch('https://api.nekosia.cat/api/v1/images/catgirl');
+        const json = await res.json();
+        return json.image.original.url;
+    } catch (err) {
+        console.error('Error fetching Neko image:', err);
+        return '';
+    }
+}
+
+async function addVerticalImage(container, index) {
+    try {
+        const url = await fetchNekoImage();
+        const img = new Image();
+        img.src = url;
+        img.onload = function () {
+            if (img.height > img.width) {
+                const imgElement = document.createElement('img');
+                imgElement.src = url;
+                imgElement.id = `layer${index + 1}`;
+                imgElement.alt = '';
+                container.appendChild(imgElement);
+            } else {
+                console.log('Image is not vertical, fetching another image:', url);
+                addVerticalImage(container, index);
+            }
+        };
+        img.onerror = function () {
+            console.error('Error loading image, retrying:', url);
+            addVerticalImage(container, index);
+        };
+    } catch (err) {
+        console.error('Error fetching image, retrying:', err);
+        addVerticalImage(container, index); 
+    }
+}
+
 if (imgContainer) {
-    for (let i = 0; i < content.images.length; i++) {
-        const img = document.createElement("img");
-        img.src = content.images[i];
-        img.id = `layer${i + 1}`;
-        imgContainer.appendChild(img);
+    for (let i = 0; i < 3; i++) {
+        addVerticalImage(imgContainer, i);
     }
 }
 
