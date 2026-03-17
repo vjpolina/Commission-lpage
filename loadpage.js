@@ -32,8 +32,6 @@ const content = {
                 <button>Submit</button>
             </form>`,
 
-    paletteSelection: ``,
-
     bottomBar: [ "Terms and conditions", "Copyright", "Contact me:" ],
     bottomBarIcons: [ "images/instagram_day.png", "images/tik-tok_day.png", "images/twitter_day.png"],
 
